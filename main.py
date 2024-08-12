@@ -65,7 +65,3 @@ async def generate_sentence(words: dict = Body(...)):
         raise HTTPException(status_code=400, detail="Input cannot be empty")
     sentence = create_sentence(words)
     return {"sentence": sentence}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="192.168.1.4", port=8000, reload=True)
