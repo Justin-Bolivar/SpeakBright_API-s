@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Body, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 from nltk.tokenize import word_tokenize
 from nltk.tag import pos_tag
 import language_tool_python
